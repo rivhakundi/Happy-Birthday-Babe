@@ -4,8 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAPPY BIRTHDAY BABY!!</title>
-    <link rel="stylesheet" href="./css/style.css">
+
 </head>
+<style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #66c2ea 0%, #4b88a2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated hearts background */
+        body::before {
+            content: "❤️ 💕 💖 ❤️ 💕 💖 ❤️ 💕 💖";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-size: 40px;
+            opacity: 0.1;
+            animation: float 20s infinite linear;
+            z-index: 0;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        header img {
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .message {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #764ba2;
+            text-align: center;
+            font-size: 2em;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .image-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+        }
+
+        .image-section img {
+            border-radius: 15px;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .image-section p {
+            margin-top: 15px;
+            font-size: 1.3em;
+            color: #333;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        iframe {
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Floating hearts animation */
+        .heart {
+            position: fixed;
+            font-size: 30px;
+            animation: rise 6s infinite ease-in;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        @keyframes rise {
+            0% {
+                bottom: -50px;
+                opacity: 1;
+            }
+            100% {
+                bottom: 100vh;
+                opacity: 0;
+                transform: translateX(100px);
+            }
+        }
+
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+        .heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+        .heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+        .heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .message {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            header {
+                padding: 20px;
+            }
+        }
+
+        /* Sparkle effect */
+        .sparkle {
+            display: inline-block;
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+    
+
+
+</style>
 <header>
     <!-- Floating hearts -->
     <div class="heart">💕</div>
