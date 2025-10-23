@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAPPY BIRTHDAY BABY!!</title>
-
-</head>
-<style>
-    
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -16,9 +13,9 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #66c2ea 0%, #4b88a2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
             position: relative;
             overflow-x: hidden;
         }
@@ -45,12 +42,16 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             position: relative;
             z-index: 1;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
         }
 
         header img {
@@ -59,6 +60,9 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
             transition: transform 0.3s ease;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
         }
 
         header img:hover {
@@ -71,7 +75,7 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 40px;
+            padding: 20px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             position: relative;
             z-index: 1;
@@ -80,10 +84,12 @@
         h1 {
             color: #667eea;
             text-align: center;
-            font-size: 3em;
-            margin-bottom: 30px;
+            font-size: 2em;
+            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
             animation: bounce 2s infinite;
+            line-height: 1.3;
+            padding: 0 10px;
         }
 
         @keyframes bounce {
@@ -92,30 +98,36 @@
         }
 
         .message {
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 1.8;
             color: #333;
             text-align: center;
-            margin: 30px 0;
-            padding: 20px;
+            margin: 20px 0;
+            padding: 20px 15px;
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
+        .message p {
+            margin-bottom: 10px;
+        }
+
         h2 {
             color: #764ba2;
             text-align: center;
-            font-size: 2em;
-            margin: 40px 0 20px;
+            font-size: 1.5em;
+            margin: 30px 0 20px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            padding: 0 10px;
+            line-height: 1.3;
         }
 
         .image-section {
             text-align: center;
-            margin: 30px 0;
-            padding: 20px;
+            margin: 20px 0;
+            padding: 20px 10px;
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             border-radius: 15px;
         }
@@ -127,6 +139,7 @@
             transition: transform 0.3s ease;
             max-width: 100%;
             height: auto;
+            display: inline-block;
         }
 
         .image-section img:hover {
@@ -135,7 +148,7 @@
 
         .image-section p {
             margin-top: 15px;
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #333;
             font-weight: bold;
             font-style: italic;
@@ -145,6 +158,8 @@
             border-radius: 12px;
             margin: 20px 0;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 100%;
         }
 
         /* Floating hearts animation */
@@ -176,25 +191,71 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+
             h1 {
-                font-size: 2em;
-            }
-
-            .message {
-                font-size: 1em;
-                padding: 15px;
-            }
-
-            h2 {
                 font-size: 1.5em;
             }
 
+            .message {
+                font-size: 0.9em;
+                padding: 15px 10px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+                margin: 20px 0 15px;
+            }
+
             .container {
-                padding: 20px;
+                padding: 15px;
+                border-radius: 15px;
             }
 
             header {
-                padding: 20px;
+                padding: 15px;
+                border-radius: 15px;
+            }
+
+            header img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .image-section {
+                padding: 15px 5px;
+            }
+
+            .image-section img {
+                border: 3px solid white;
+            }
+
+            iframe {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .message {
+                font-size: 0.85em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            iframe {
+                height: 250px;
+            }
+
+            .image-section p {
+                font-size: 1em;
             }
         }
 
@@ -208,36 +269,42 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.3; }
         }
-
-    
-
-
-</style>
-<header>
+    </style>
+</head>
+<body>
     <!-- Floating hearts -->
     <div class="heart">💕</div>
     <div class="heart">❤️</div>
     <div class="heart">💖</div>
     <div class="heart">💕</div>
     <div class="heart">❤️</div>
-    <!--logo-->
-    <img src="./assets/WhatsApp Image 2025-10-23 at 00.31.37_1b49a494.jpg" alt="us!" width="90" height="90">
-    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4iuNZTcvT9diFySSzVsnVS?utm_source=generator" 
-    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-</header>
-<body>
-    <h1><span class="sparkle">🎉</span> HAPPY BIRTHDAY TO MY MAN!!! <span class="sparkle">🎉</span></h1>
-    <P style="font-size: medium; text-transform: capitalize;"><br>WISHING YOU ALL THE BEST IN THE UPCOMING YEAR,</br>
-    <br>MAY ALL YOUR WISHES COME TRUE AND MAY  YOU GET MORE MONEY TO SPOIL ME.</br><br> I LOVE YOU DZOWN MY BIG DZADZY!!</br>
-    <br>KNOW THAT I'M ALWAYS HERE CHEERING YOU ON AND IM SUPER PROUD OF THE LIFE YOU'VE BUILT FOR YOURSELF</br></P>
+    <header>
+        <img src="./assets/WhatsApp Image 2025-10-23 at 00.31.37_1b49a494.jpg" alt="us!">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4iuNZTcvT9diFySSzVsnVS?utm_source=generator" 
+        height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </header>
 
-    <h2 style="color: dimgrey; text-align: center;">YOU ARE my [0] INTEGER</h2>
-    <img style="text-align: center;" src="./assets/WhatsApp Image 2025-10-23 at 00.31.37_344bddfa.jpg" alt="mufunwawanga" width="150" height="150">
-    <p style="font-size: medium;">Till the wheels fall off!</p>
+    <div class="container">
+        <h1><span class="sparkle">🎉</span> HAPPY BIRTHDAY TO MY MAN!!! <span class="sparkle">🎉</span></h1>
+        
+        <div class="message">
+            <p>WISHING YOU ALL THE BEST IN THE UPCOMING YEAR,</p>
+            <p>MAY ALL YOUR WISHES COME TRUE AND MAY YOU GET MORE MONEY TO SPOIL ME.</p>
+            <p>I LOVE YOU DZOWN MY BIG DZADZY!!</p>
+            <p>KNOW THAT I'M ALWAYS HERE CHEERING YOU ON AND I'M SUPER PROUD OF THE LIFE YOU'VE BUILT FOR YOURSELF</p>
+        </div>
 
-    <h2 style="color: dimgrey; text-align: center;">DINGA LA MBILUYANGA</h2>
-    <img src="./assets/WhatsApp Image 2025-10-23 at 00.33.02_334a1deb.jpg" alt="bae" width="300" height="300">
+        <h2>💻 YOU ARE MY [0] INTEGER 💻</h2>
+        <div class="image-section">
+            <img src="./assets/WhatsApp Image 2025-10-23 at 00.31.37_344bddfa.jpg" alt="mufunwawanga">
+            <p>Till the wheels fall off! 🚗💨</p>
+        </div>
 
+        <h2>💖 DINGA LA MBILUYANGA 💖</h2>
+        <div class="image-section">
+            <img src="./assets/WhatsApp Image 2025-10-23 at 00.33.02_334a1deb.jpg" alt="bae">
+        </div>
+    </div>
 </body>
 </html>
